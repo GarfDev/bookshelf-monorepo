@@ -6,5 +6,7 @@ import { UsersService } from "../users/users.service";
 export class AuthService {
   constructor(private userService: UsersService) {}
 
-  async generate() {}
+  async generateLoginToken() {
+    return "This should be login token"
+  }
 }

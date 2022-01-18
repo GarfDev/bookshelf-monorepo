@@ -8,6 +8,7 @@ import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
 import { SessionModule } from './session/session.module';
+import { CommonModule } from './common/common.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { SessionModule } from './session/session.module';
     UsersModule,
     AuthModule,
     SessionModule,
+    CommonModule,
   ],
   controllers: [AppController],
   providers: [AppService],
