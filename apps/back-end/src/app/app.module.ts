@@ -7,9 +7,16 @@ import { AppService } from './app.service';
 
 import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
+import { SessionModule } from './session/session.module';
 
 @Module({
-  imports: [ConfigModule.forRoot(), MongooseModule.forRoot(process.env.MONGO_URL), UsersModule, AuthModule],
+  imports: [
+    ConfigModule.forRoot(),
+    MongooseModule.forRoot(process.env.MONGO_URL),
+    UsersModule,
+    AuthModule,
+    SessionModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
